@@ -117,7 +117,8 @@ odds_0720 <- nba_0720[ , c(14,1:13)]
 # create common game ID
 odds_0720$dateID <- sapply( odds_0720$Date , function(x) ifelse( nchar(x) > 3 , x , paste0(0,x) ) )
 odds_0720_id <- left_join( odds_0720 , teamIDs1[ , c("teamID","odds")] , by = c("Team"="odds") )
-odds_0720_id <- left_join( odds_0720_id , gamelogs_0720_id[, c("seasonID","dateID","teamID","oppID", "locationGame")] , by = c("Season"="seasonID", "dateID"="dateID", "teamID"="teamID") )
+odds_0720_id <- left_join( odds_0720_id , gamelogs_0720_id[, c("seasonID","dateID","teamID","oppID", "locationGame")] ,
+                           by = c("Season"="seasonID", "dateID"="dateID", "teamID"="teamID") )
 
 # check NAs
 apply(odds_0720_id, 2, function(x) length(which(is.na(x))))

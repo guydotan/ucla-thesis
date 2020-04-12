@@ -1,6 +1,6 @@
 ##### All functions used throughout the code #####
 
-## function to convert betting moneyline to win probability ##
+## function to convert betting moneyline to implied win probability ##
 ml_to_prob <- function ( ml ) {
   if (is.na(ml)){
     prob <- NA
@@ -18,8 +18,8 @@ prob_to_ml <- function ( prob ) {
   prob <- ifelse(prob > 1 || prob < 0, return("Please enter a probability between 0 and 1"), prob)
   
   # formula to convert from Prob to ML
-  if (is.na(ml)){
-    prob <- NA
+  if (is.na(prob)){
+    ml <- NA
   } else if  (prob > .5) {
     ml <- -1 * ( prob ) / ( 1 - prob ) * 100
   } else {
