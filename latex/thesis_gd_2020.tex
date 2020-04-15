@@ -268,11 +268,11 @@ P(A) + P(A^{c}) & =  &&\\
 \noindent So these two implied probabilities are mutually exclusive, compose the entire space of outcomes, and yet sum to over 100\%. This summed probability (in this case 105\%) that is greater than 1 is called the ``overround'' and is how sportsbooks take their cut. By setting the betting lines such that the probabilities result in an overround, the sportsbook effectively ensures that they will gain a profit from this wager. In our example above, a \$100 bet on the Warriors pays out \$42, while a \$100 bet on the Clippers pays out \$185. In order to determine how much a sportsbook would expect to pay out from these implied probabilities can be calculated as follows:
 
 \noindent \text{\underline{Expected Profit:}} \\
-\noindent \text{Let $E(\Pi) $ = Expected Profit} \\
+\noindent \text{Let $E(\Pi) $ = Expected Profit for Sportsbook} \\
 \noindent \text{$E(\Pi_i) = \Pi_i * P(win_i) $ } \\
 \noindent \text{ $E(\Pi) = \sum_i{\Big( E(\Pi_{i}) \Big) } $} \\
 \noindent \text{ $E(\Pi) = \sum_i{\Big( \Pi_i * P(win_i) \Big) } $} \\
-\noindent \text{ $E(\Pi) = \Pi_A * Pt(win_A) + \Pi_{A^C} * P(win_{A^C}) $} \\
+\noindent \text{ $E(\Pi) = \Pi_A * P(win_A) + \Pi_{A^C} * P(win_{A^C}) $} \\
 
 \noindent \text{Using our example...} \\
 \noindent \text{$E(\Pi_A) $ = Expected Profit if Warriors Win} \\
@@ -285,10 +285,10 @@ P(A) + P(A^{c}) & =  &&\\
 \noindent \text{= $\sim$\$95} \\
 
 
-\noindent As seen above, this overround of the probabilities creates the vig for the casino. If the sportsbook were to take \$100 of total wagers on this bet, on average, they would expect to pay out just \$95. Thus, ensuring a cut of about \$5 for this wager. Now consider the fact that casinos collect millions of dollars on bets, not \$100, it is easy to see why sports gambling is such a lucrative endeavor for bookkeepers, especially when the optimal moneylines are established (and therefore the juice is optimized as well). \\
+\noindent As seen above, this overround (105\%) of the probabilities creates the vig for the casino. If the sportsbook were to take \$100 of total wagers on this bet, on average, they would expect to pay out just \$95. Thus, ensuring a cut of about \$5 for this wager. Now consider the fact that casinos collect millions of dollars on bets, not \$100, it is easy to see why sports gambling is such a lucrative endeavor for bookkeepers, especially when the optimal moneylines are established (and therefore the juice is optimized as well). \\
 
 \section{``Removing the Juice'' - Actual Win Probability}
-In order to get a clear idea of the sportsbooks' expectations of how likely each of the two teams is to win a matchup we need to get rid of the guaranteed profit they bake into the lines. The implied probabilities are derived from the betting lines but the actual probabilities are what remains after taking the vig into account. Probability theory claims that the sum of all possible events should always equate to 1. So to get the true probabilities based on the betting odds, the implied probabilities need to be skewed so that they also sum to 1. The method to remove the vig is simple, just divide the probability by the overround. \\
+In order to get a clear idea of the sportsbooks' expectations of how likely each of the two teams is to win a matchup, we need to get rid of the guaranteed profit they bake into the lines. The implied probabilities are derived from the betting lines, but the actual probabilities are what remains after taking the vig into account. Probability theory claims that the sum of all possible events in a sample space should always equate to 1. So to get the true probabilities based on the betting odds, the implied probabilities need to be skewed so that they also sum to 1. The method to remove the vig is simple, just divide the probability by the overround. \\
 
 $$
 \displaystyle
