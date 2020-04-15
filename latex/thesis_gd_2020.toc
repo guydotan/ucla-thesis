@@ -2,15 +2,15 @@
 \contentsline {section}{\numberline {1.1}Current State of Sports Analytics}{1}
 \contentsline {section}{\numberline {1.2}The Legalization of Sports Gambling}{2}
 \contentsline {section}{\numberline {1.3}The Intersection of Data and Wagering}{3}
-\contentsline {chapter}{\numberline {2}The Mathematics of Sports Gambling}{5}
-\contentsline {section}{\numberline {2.1}Point Spreads, Over/Unders, and Moneylines}{5}
-\contentsline {section}{\numberline {2.2}Implied Win Probability}{8}
-\contentsline {section}{\numberline {2.3}Derivation of Implied Win Probability}{8}
-\contentsline {section}{\numberline {2.4}The Vig or the Juice}{9}
-\contentsline {section}{\numberline {2.5}``Removing the Juice'' - Actual Win Probability}{12}
-\contentsline {chapter}{\numberline {3}Exploratory Analysis}{13}
-\contentsline {chapter}{\numberline {4}Random Forest}{14}
-\contentsline {chapter}{\numberline {5}Neural Network}{15}
-\contentsline {chapter}{\numberline {6}Betting Results}{16}
-\contentsline {chapter}{\numberline {7}Kelly Criterion}{17}
-\contentsline {chapter}{\numberline {8}Conclusions}{18}
+\contentsline {chapter}{\numberline {2}The Mathematics of Sports Gambling}{6}
+\contentsline {section}{\numberline {2.1}Point Spreads, Over/Unders, and Moneylines}{6}
+\contentsline {section}{\numberline {2.2}Implied Win Probability}{9}
+\contentsline {section}{\numberline {2.3}Derivation of Implied Win Probability}{9}
+\contentsline {section}{\numberline {2.4}The Vig or the Juice}{10}
+\contentsline {section}{\numberline {2.5}``Removing the Juice'' - Actual Win Probability}{13}
+\contentsline {chapter}{\numberline {3}Exploratory Analysis}{14}
+\contentsline {chapter}{\numberline {4}Random Forest}{15}
+\contentsline {chapter}{\numberline {5}Neural Network}{16}
+\contentsline {chapter}{\numberline {6}Betting Results}{17}
+\contentsline {chapter}{\numberline {7}Kelly Criterion}{18}
+\contentsline {chapter}{\numberline {8}Conclusions}{19}

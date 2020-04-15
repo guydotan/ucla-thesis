@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 APR 2020 17:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 APR 2020 00:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -153,18 +153,18 @@ LaTeX Warning: Label `ip_dog' multiply defined.
 )
 \openout1 = `thesis_gd_2020.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
  (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
@@ -231,17 +231,18 @@ e
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 99--99
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
 
  []
 
@@ -271,29 +272,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--99
 ] [7]
 CHAPTER 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
@@ -302,82 +298,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+[2] <./images/20200326_betting_map.png, id=39, 1300.86pt x 1250.6725pt>
+File: ./images/20200326_betting_map.png Graphic file (type png)
+
+<use ./images/20200326_betting_map.png>
+Package pdftex.def Info: ./images/20200326_betting_map.png used on input line 1
+35.
+(pdftex.def)             Requested size: 250.93842pt x 241.25615pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+[3 <./images/20200326_betting_map.png (PNG copy)>]
+<./images/gaming_revenue.png, id=43, 1039.885pt x 851.18pt>
+File: ./images/gaming_revenue.png Graphic file (type png)
+
+<use ./images/gaming_revenue.png>
+Package pdftex.def Info: ./images/gaming_revenue.png used on input line 144.
+(pdftex.def)             Requested size: 301.1261pt x 246.47221pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
+[4 <./images/gaming_revenue.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-[4]
+[5]
 CHAPTER 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[5
+[6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--157
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
 
  []
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
@@ -386,59 +396,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 270--276
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 277--286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 284--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 [12]
-CHAPTER 3.
-[13
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
-]
-CHAPTER 4.
+ []
+
+[13]
+CHAPTER 3.
 [14
 
 ]
-CHAPTER 5.
+CHAPTER 4.
 [15
 
 ]
-CHAPTER 6.
+CHAPTER 5.
 [16
 
 ]
-CHAPTER 7.
+CHAPTER 6.
 [17
 
 ]
-CHAPTER 8.
+CHAPTER 7.
 [18
+
+]
+CHAPTER 8.
+[19
 
 ] (./thesis_gd_2020.aux)
 
@@ -446,10 +461,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2389 strings out of 492995
- 31829 string characters out of 6132704
- 102960 words of memory out of 5000000
- 5909 multiletter control sequences out of 15000+600000
+ 2401 strings out of 492995
+ 32162 string characters out of 6132704
+ 102976 words of memory out of 5000000
+ 5917 multiletter control sequences out of 15000+600000
  8915 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,25p,1064b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -463,10 +478,10 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis_gd_2020.pdf (26 pages, 143924 bytes).
+Output written on thesis_gd_2020.pdf (27 pages, 274636 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
