@@ -160,7 +160,7 @@ Donec sed urna nec neque gravida elementum. Nullam turpis odio, venenatis sit am
 \section{Point Spreads, Over/Unders, and Moneylines}
 Point spreads are mechanisms used to account for the discrepancy between two unevenly matched teams. Usually noted by: Warriors (-5) vs. Clippers or the inverse: Clippers (+5) vs. Warriors. The number in the parenthesis is called the ``spread.'' Essentially, the sportsbook believes that the Warriors are more likely to win the game, but the book wants to drive an even amount of bettors to wager on the Clippers (even though they are underdogs) as the Warriors. Therefore, their bookmakers suggest placing a spread of five points on the game. So, if I bet on the Warriors they need to win by more than 5 points for me to win the bet. If I bet on the Clippers, they have to lose by 4 points or fewer or win the game, for me to cash in on the wager. If the game ends with the Warriors winning by 5 points, then this is called a ``push'' and all bettors get their money back. Sometimes a spread will be listed at 0 points (called a ``pick-em''), indicating that this is an even matchup and all you have to do is pick the winner to win the bet.\\
 
-\noindent Similar to point spreads, over/unders involve a specific point amount that a bettor needs to wager on the correct side of. However, in this case, the winner of the game is irrelevant. All the bettor must do is guess if the combined score between the teams will be greater than or less than the over/under line. For example, Warriors vs. Clippers (+200). If I bet the ``over 200'', I am expecting the combined score between the two teams to reach 201 or more and it does not matter what combination in occurs (Warriors 120-Clippers 81, Clippers 101-Warriors 100, etc.) If the final combined score is exactly 200, again this is called a push and bettors get their money back. For this reason, over/unders (and spreads for that matter), oftentimes use fractional lines (+5.5 or +200.5) to prevent the case of a push. Over/unders can be offered for single quarters, just the first half, just the second half, or even for a single team's score.\\
+\noindent Similar to point spreads, over/unders involve a specific point amount that a bettor needs to wager on the correct side of. However, in this case, the winner of the game is irrelevant. All the bettor must do is guess if the combined score between the teams will be greater than or less than the over/under line. For example, Warriors vs. Clippers (+200). If I bet the ``over 200'', I am expecting the combined score between the two teams to reach 201 or more and it does not matter what combination in occurs (Warriors 120-Clippers 81, Clippers 101-Warriors 100, etc.) If the final combined score is exactly 200, again this is called a push and bettors get their money back. For this reason, over/unders (and spreads for that matter), oftentimes use fractional lines (+5.5 or o200.5) to prevent the case of a push. Over/unders can be offered for single quarters, just the first half, just the second half, or even for a single team's score.\\
 
 \noindent The third type of popular betting type are called moneylines and are the relevant bet type for this study. In a moneyline bet, a person simply needs to determine which team will win the game. But if one team was heavy favorite versus the other team, it would not make sense for a sportsbook to pay out and an equal amount for choosing the favorite as choosing the underdog. As a result, sportsbooks offer a moneyline, which adjusts the amount you win for having your bet hit based on the likelihood that team will win the game. Moneylines are notated in various formats: decimal, fractional, and moneyline. The first two are commonly used in Europe. This paper will use the moneyline odds notation since they are most common to the US (and often called ``American'' odds). Moneylines are written as follows: Warriors (-235) vs. Clippers, or conversely, Clippers (+185) vs. Warriors. \\
 
@@ -211,7 +211,7 @@ Point spreads are mechanisms used to account for the discrepancy between two une
 \section{Implied Win Probability}
 The payout formula for moneylines makes it quite simple to determine how much profit a bettor can make from having their wager hit. Risk averse bettors tend to take favorites (negative moneylines) despite the lower payouts because there is a higher chance that the team they bet on will win. Risky bettors will seek out underdogs with lower probabilities of winning, but they think will actually surprise the public, win the game, and thus provide a larger profit-margin. \\
 
-\noindent In addition to the payout, however, moneylines can actually be converted into a win probability known as ``implied probability''. The implied probability formula is defined as the size of the bettor's wager divided by the return on investment for that wager. Or simply: risk over return.
+\noindent In addition to the payout, however, moneylines can actually be converted into a win probability known as ``implied probability''. The implied probability formula is defined as the size of the bettor's wager divided by the return on investment for that wager. Or simply: risk over return. When placing a wager and consequently winning that wager, the bettor receives their initial risk amount back in addition to the profit-margin. Thus, return on investment of a wager is just risk plus return.
 
 \begin{equation} \label{imp_prob}
 \begin{split}
@@ -221,7 +221,7 @@ The payout formula for moneylines makes it quite simple to determine how much pr
 Note: \emph{Return} = \emph{Risk} + \emph{Profit}
 
 \section{Derivation of Implied Win Probability}
-A universal formula to calculate the implied win probability for any bet (underdog or favorite) can be derived by plugging in the formula for moneyline profit for an underdog (equation \ref{ml_prof_dog}) and a favorite (equation \ref{ml_prof_fav}) into the implied formula (equation \ref{imp_prob}).
+A universal formula to calculate the implied win probability for any bet (underdog or favorite) can be derived by plugging in the formula for moneyline profit for an underdog (equation \ref{ml_prof_dog}) and a favorite (equation \ref{ml_prof_fav}) into the implied probability formula (equation \ref{imp_prob}).
 
 \noindent \text{\underline{Implied Probability - Underdog}} \\
 \begin{equation} \label{ip_dog}
@@ -239,12 +239,12 @@ IP_{dog} & = \frac{100}{100 + ML}
 \noindent \text{\underline{Implied Probability - Favorite}} \\
 \begin{equation} \label{ip_dog}
 \begin{split}
-IP_{dog} & = \frac{Risk}{Return}  \\
+IP_{fav} & = \frac{Risk}{Return}  \\
 & = \frac{Risk}{Risk + \Pi_{f}}  \\
-& = \frac{Risk}{Risk + \left( \frac{100}{-1 * ML} \right) * Risk } \\ 
+& = \frac{Risk}{Risk + \left( \frac{100}{-1 * ML} * Risk \right) } \\ 
 & = \frac{Risk}{Risk \left( 1 + \frac{100}{-1 * ML}  \right)} \\ 
 & = \frac{1}{ 1 + \frac{100}{(-1 * ML)} } \\ 
-IP_{dog} & = \frac{(-1 * ML)}{(-1 * ML) + 100} 
+IP_{fav} & = \frac{(-1 * ML)}{(-1 * ML) + 100} 
 \end{split}
 \end{equation}
 
@@ -264,7 +264,7 @@ IP(ML) =
 \section{The Vig or the Juice}
 As mentioned previously, the goal of a sportsbook is to have an equal amount of money placed on both sides of a wager so that no matter the results, they will make money once they take their cut of the bets. This cut is known as the vigorish, and more colloquially, the ``vig'' or the ``juice.'' So how does one calculate the juice? Let's use our example from above with the Warriors versus the Clippers. \\
 
-\noindent The Warriors moneyline odds were -235, which after using the derived formula, comes out to an implied probability of 70.15\%. The Clippers moneyline odds were +185 and therefore an implied probability of 35.09\%. Now the most basic rule of probability states that the sum of all possible probabilities of an event always equals 1. And more specifically, the probability of an event plus the probability of the complement of that event equals 1. If we consider the chances that a team wins a game as the probability while the chances they lose is the complement of that probability, we would expect these two events to sum to 1. See below: \\ 
+\noindent The Warriors moneyline odds were -235, which after using the derived formula, comes out to an implied probability of 70.15\%. The Clippers moneyline odds were +185 and therefore an implied probability of 35.09\%. Now, the most basic rule of probability states that the sum of all possible probabilities of an event always equals 1. And more specifically, the probability of an event plus the probability of the complement of that event equals 1. In basketball there are only two valid outcomes of a game: win or loss. If we consider the chances that a team wins a game as the probability while the chances they lose is the complement of that probability, we would expect these two events to sum to 1. See below: \\ 
 
 \noindent \text{\underline{Given:}} \\
 \noindent \text{$P(A) + P(A^{c}) = 1 $ } \\
@@ -279,7 +279,7 @@ P(A) + P(A^{c}) & =  &&\\
 1.05 & \neq 1
 \end{flalign*}
 
-\noindent So these two implied probabilities are mutually exclusive, compose the entire space of outcomes, and yet sum to over 100\%. This summed probability (in this case 105\%) that is greater than 1 is called the ``overround'' and is how sportsbooks take their cut. By setting the betting lines such that the probabilities result in an overround, the sportsbook effectively ensures that they will gain a profit from this wager. In our example above, a \$100 bet on the Warriors pays out \$42, while a \$100 bet on the Clippers pays out \$185. In order to determine how much a sportsbook would expect to pay out from these implied probabilities can be calculated as follows:
+\noindent So these two implied probabilities are mutually exclusive, compose the entire space of outcomes, and yet sum to over 100\%. This summed probability (in this case 105\%) that is greater than 1 is called the ``overround'' and is how sportsbooks take their cut. By setting the betting lines such that the probabilities result in an overround, the sportsbook effectively ensures that they will gain a profit from this wager. In our example above, a \$100 bet on the Warriors pays out \$42, while a \$100 bet on the Clippers pays out \$185. One can determine how much a sportsbook would expect to pay out from these implied probabilities through the following calculation:
 
 \noindent \text{\underline{Expected Profit:}} \\
 \noindent \text{Let $E(\Pi) $ = Expected Profit for Sportsbook} \\
@@ -291,7 +291,7 @@ P(A) + P(A^{c}) & =  &&\\
 \noindent \text{Using our example...} \\
 \noindent \text{$E(\Pi_A) $ = Expected Profit if Warriors Win} \\
 \noindent \text{$E(\Pi_{A})  = \Pi_{A} * P(A)$} \\
-\noindent \text{$E(\Pi_A) $ = \$42 * 0.7 = $\sim$\$30} \\
+\noindent \text{$E(\Pi_A) $ = $\sim $\$42 * 0.7 = $\sim$\$30} \\
 \noindent \text{$E(\Pi_{A^C}) $ = Expected Profit if Clippers Win} \\
 \noindent \text{$E(\Pi_{A^C})  = \Pi_{A^C} * P(A^C)$} \\
 \noindent \text{$E(\Pi_{A^C}) $ = \$185 * 0.35 = $\sim$\$65} \\
