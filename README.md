@@ -14,3 +14,5 @@ UCLA MAS Thesis 2020
 	* https://www.sportsbookreview.com/forum/handicapper-think-tank/29009-expected-value-vs-expected-growth-kelly-criterion-part-i.html#post250260
 	* https://www.sportsbookreview.com/forum/handicapper-think-tank/29841-maximizing-expected-growth-kelly-criterion-part-ii.html
 	* https://www.youtube.com/watch?v=k6gqlK6UZhQ
+* NBA API
+	* http://practicallypredictable.com/2017/12/21/web-scraping-nba-team-matchups-box-scores/

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 APR 2020 00:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 MAY 2020 00:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -146,38 +146,136 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
-(./thesis_gd_2020.aux
+(/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip44
+\multirow@cntb=\count109
+\multirow@dima=\skip45
+\bigstrutjot=\dimen127
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count110
+\LTcapwidth=\dimen128
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count111
+\LT@rows=\count112
+\c@LT@tables=\count113
+\c@LT@chunks=\count114
+\LT@p@ftn=\toks20
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-LaTeX Warning: Label `ip_dog' multiply defined.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen129
+\captionmargin@=\dimen130
+\captionwidth=\dimen131
+\caption@tempdima=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
+tempboxa \hbox {#1: #2} \ifdim \wd \@tempboxa >\hsize \unhbox \@tempboxa \par \
+else \hbox to\hsize {\hfil \box \@tempboxa \hfil } \fi .
+\c@ContinuedFloat=\count115
+Package caption Info: longtable package is loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+
+Package subfig Warning: Your document class has a bad definition
+ of \endfigure, most likely
+ \let\endfigure=\end@float
+ which has now been changed to
+ \def\endfigure{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endfigure.
+ Please complain to your document class author.
+
+
+Package subfig Warning: Your document class has a bad definition
+ of \endtable, most likely
+ \let\endtable=\end@float
+ which has now been changed to
+ \def\endtable{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endtable.
+ Please complain to your document class author.
+
+\c@KVtest=\count116
+\sf@farskip=\skip52
+\sf@captopadj=\dimen136
+\sf@capskip=\skip53
+\sf@nearskip=\skip54
+\c@subfigure=\count117
+\c@subfigure@save=\count118
+\c@lofdepth=\count119
+\c@subtable=\count120
+\c@subtable@save=\count121
+\c@lotdepth=\count122
+\sf@top=\skip55
+\sf@bottom=\skip56
+) (./thesis_gd_2020.aux
+
+LaTeX Warning: Label `eq:kc-deriv3' multiply defined.
 
 )
 \openout1 = `thesis_gd_2020.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
  (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen127
-\scratchbox=\box28
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen128
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count123
+\scratchdimen=\dimen137
+\scratchbox=\box32
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen138
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -227,22 +325,26 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+
 [0
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
+Underfull \hbox (badness 10000) in paragraph at lines 107--107
 
  []
 
@@ -250,210 +352,414 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--101
 
 ] [3
 
-] (./thesis_gd_2020.toc)
+] (./thesis_gd_2020.toc [4
+
+])
 \tf@toc=\write3
 \openout3 = `thesis_gd_2020.toc'.
 
- [4
-
-] (./thesis_gd_2020.lof)
+ [5] (./thesis_gd_2020.lof)
 \tf@lof=\write4
 \openout4 = `thesis_gd_2020.lof'.
 
- [5
+ [6
 
 ]
 (./thesis_gd_2020.lot)
 \tf@lot=\write5
 \openout5 = `thesis_gd_2020.lot'.
 
- [6
+ [7
 
-] [7]
+] [8]
 CHAPTER 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
 [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+] [2] <./images/20200520_betting_map.png, id=42, 1300.86pt x 1250.6725pt>
+File: ./images/20200520_betting_map.png Graphic file (type png)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-[2] <./images/20200326_betting_map.png, id=39, 1300.86pt x 1250.6725pt>
-File: ./images/20200326_betting_map.png Graphic file (type png)
-
-<use ./images/20200326_betting_map.png>
-Package pdftex.def Info: ./images/20200326_betting_map.png used on input line 1
-35.
+<use ./images/20200520_betting_map.png>
+Package pdftex.def Info: ./images/20200520_betting_map.png used on input line 1
+41.
 (pdftex.def)             Requested size: 250.93842pt x 241.25615pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 142--142
+[] [] 
  []
 
-[3 <./images/20200326_betting_map.png (PNG copy)>]
-<./images/gaming_revenue.png, id=43, 1039.885pt x 851.18pt>
+[3 <./images/20200520_betting_map.png (PNG copy)>]
+<./images/gaming_revenue.png, id=46, 1039.885pt x 851.18pt>
 File: ./images/gaming_revenue.png Graphic file (type png)
 
 <use ./images/gaming_revenue.png>
-Package pdftex.def Info: ./images/gaming_revenue.png used on input line 144.
+Package pdftex.def Info: ./images/gaming_revenue.png used on input line 150.
 (pdftex.def)             Requested size: 301.1261pt x 246.47221pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
-
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 151--151
+[] [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
-
- []
-
-[4 <./images/gaming_revenue.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-[5]
+[4 <./images/gaming_revenue.png>] [5]
 CHAPTER 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-
- []
-
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 284--290
+Underfull \hbox (badness 10000) in paragraph at lines 290--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--300
+Underfull \hbox (badness 10000) in paragraph at lines 297--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
+ []
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 329--329
+[] [] 
  []
 
 [13]
 CHAPTER 3.
+<./images/fav_sports.png, id=84, 722.7pt x 373.395pt>
+File: ./images/fav_sports.png Graphic file (type png)
+
+<use ./images/fav_sports.png>
+Package pdftex.def Info: ./images/fav_sports.png used on input line 351.
+(pdftex.def)             Requested size: 351.31378pt x 181.51227pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 352--352
+[] [] 
+ []
+
 [14
 
-]
+ <./images/fav_sports.png>] [15]
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 371--371
+[] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 370--375
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 375--377
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 377--380
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 380--382
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 382--404
+ [] [] [] 
+ []
+
+[16]
+Overfull \hbox (11.8281pt too wide) in alignment at lines 404--424
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.8281pt too wide) in alignment at lines 424--431
+ [] [] [] 
+ []
+
+[17] [18] [19]
 CHAPTER 4.
-[15
+[20
 
-]
+] <./images/stats_season_avg.png, id=112, 1166.3575pt x 843.15pt>
+File: ./images/stats_season_avg.png Graphic file (type png)
+
+<use ./images/stats_season_avg.png>
+Package pdftex.def Info: ./images/stats_season_avg.png used on input line 462.
+(pdftex.def)             Requested size: 501.87683pt x 362.80473pt.
+
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 462--463
+ [][] 
+ []
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 463--463
+[] [] 
+ []
+
+[21 <./images/stats_season_avg.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
+
+ []
+
+<./images/pace_byseason.png, id=117, 1003.75pt x 1003.75pt>
+File: ./images/pace_byseason.png Graphic file (type png)
+
+<use ./images/pace_byseason.png>
+Package pdftex.def Info: ./images/pace_byseason.png used on input line 480.
+(pdftex.def)             Requested size: 401.50146pt x 401.50821pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 481--481
+[] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] <./images/pace_adjust_hist.png, id=122, 1166.3575pt x 843.15pt>
+File: ./images/pace_adjust_hist.png Graphic file (type png)
+
+<use ./images/pace_adjust_hist.png>
+Package pdftex.def Info: ./images/pace_adjust_hist.png used on input line 494.
+(pdftex.def)             Requested size: 501.87683pt x 362.80473pt.
+
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 494--495
+ [][] 
+ []
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 495--495
+[] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23 <./images/pace_byseason.png>]
+<./images/off_rtg.png, id=127, 1003.75pt x 602.25pt>
+File: ./images/off_rtg.png Graphic file (type png)
+
+<use ./images/off_rtg.png>
+Package pdftex.def Info: ./images/off_rtg.png used on input line 503.
+(pdftex.def)             Requested size: 451.68915pt x 271.01918pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 504--504
+[] [] 
+ []
+
+<./images/def_rtg.png, id=128, 1003.75pt x 602.25pt>
+File: ./images/def_rtg.png Graphic file (type png)
+
+<use ./images/def_rtg.png>
+Package pdftex.def Info: ./images/def_rtg.png used on input line 510.
+(pdftex.def)             Requested size: 451.68915pt x 271.01918pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 511--511
+[] [] 
+ []
+
+<./images/net_rtg.png, id=129, 1003.75pt x 602.25pt>
+File: ./images/net_rtg.png Graphic file (type png)
+
+<use ./images/net_rtg.png>
+Package pdftex.def Info: ./images/net_rtg.png used on input line 517.
+(pdftex.def)             Requested size: 451.68915pt x 271.01918pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 518--518
+[] [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./images/pace_adjust_hist.png>] [25 <./images/off_rtg.png> <./images/def_r
+tg.png>] [26 <./images/net_rtg.png>] [27] [28]
 CHAPTER 5.
-[16
+<./images/corrs_plot.png, id=151, 3079.505pt x 1748.5325pt>
+File: ./images/corrs_plot.png Graphic file (type png)
 
-]
+<use ./images/corrs_plot.png>
+Package pdftex.def Info: ./images/corrs_plot.png used on input line 554.
+(pdftex.def)             Requested size: 501.87683pt x 284.94691pt.
+
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 554--555
+ [][] 
+ []
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 555--555
+[] [] 
+ []
+
+[29
+
+ <./images/corrs_plot.png>] [30]
 CHAPTER 6.
-[17
+[31
 
 ]
 CHAPTER 7.
-[18
+
+Underfull \hbox (badness 10000) in paragraph at lines 578--579
+
+ []
+
+[32
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
+
+ []
+
+<./images/break-even.png, id=165, 1003.75pt x 903.375pt>
+File: ./images/break-even.png Graphic file (type png)
+
+<use ./images/break-even.png>
+Package pdftex.def Info: ./images/break-even.png used on input line 606.
+(pdftex.def)             Requested size: 325.215pt x 292.69742pt.
+
+Overfull \hbox (70.63303pt too wide) in paragraph at lines 612--625
+ [][] 
+ []
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 626--626
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
+
+ []
+
+[33] [34 <./images/break-even.png>] [35]
+<./images/fixed-bets-fav.png, id=177, 629.35126pt x 579.16376pt>
+File: ./images/fixed-bets-fav.png Graphic file (type png)
+
+<use ./images/fixed-bets-fav.png>
+Package pdftex.def Info: ./images/fixed-bets-fav.png used on input line 658.
+(pdftex.def)             Requested size: 220.50885pt x 202.92244pt.
+
+<./images/fixed-bets-edge.png, id=178, 629.35126pt x 579.16376pt>
+File: ./images/fixed-bets-edge.png Graphic file (type png)
+
+<use ./images/fixed-bets-edge.png>
+Package pdftex.def Info: ./images/fixed-bets-edge.png used on input line 660.
+(pdftex.def)             Requested size: 220.50885pt x 202.92244pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 661--661
+[] [] 
+ []
+
+<./images/bet-performance-fixed.png, id=179, 1003.75pt x 702.625pt>
+File: ./images/bet-performance-fixed.png Graphic file (type png)
+
+<use ./images/bet-performance-fixed.png>
+Package pdftex.def Info: ./images/bet-performance-fixed.png used on input line 
+670.
+(pdftex.def)             Requested size: 451.68915pt x 316.18904pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 671--671
+[] [] 
+ []
+
+[36 <./images/fixed-bets-fav.png> <./images/fixed-bets-edge.png>] [37 <./images
+/bet-performance-fixed.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 681.
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 683--683
+[] [] 
+ []
+
+[38]
 CHAPTER 8.
-[19
+[39
+
+] [40] [41]
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
+[42] [43] [44] [45] [46] [47]
+<./images/bet-performance-kc.png, id=221, 1003.75pt x 702.625pt>
+File: ./images/bet-performance-kc.png Graphic file (type png)
+
+<use ./images/bet-performance-kc.png>
+Package pdftex.def Info: ./images/bet-performance-kc.png used on input line 915
+.
+(pdftex.def)             Requested size: 451.68915pt x 316.18904pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 916--916
+[] [] 
+ []
+
+[48 <./images/bet-performance-kc.png>] [49]
+CHAPTER 9.
+[50
+
+]
+CHAPTER 10.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 933.
+
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 935--935
+[] [] 
+ []
+
+(./thesis_gd_2020.bbl [51
+
+] [52]) [53
 
 ] (./thesis_gd_2020.aux)
 
@@ -461,27 +767,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2401 strings out of 492995
- 32162 string characters out of 6132704
- 102976 words of memory out of 5000000
- 5917 multiletter control sequences out of 15000+600000
- 8915 words of font info for 32 fonts, out of 8000000 for 9000
+ 3977 strings out of 492995
+ 59698 string characters out of 6132704
+ 133971 words of memory out of 5000000
+ 7451 multiletter control sequences out of 15000+600000
+ 9706 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,17n,25p,1064b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,17n,46p,1424b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis_gd_2020.pdf (27 pages, 308167 bytes).
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis_gd_2020.pdf (62 pages, 1809999 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 292 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

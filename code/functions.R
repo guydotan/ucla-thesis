@@ -92,7 +92,7 @@ bet_amt <- function ( bank , kc ){
 
 ## function to calculate present value of your bankroll based on the Kelly Criteria bet amount ##
 bankroll <- function ( bank , ml , amt , win ){
-  if( win == TRUE ){
+  if( win == 'TRUE' | win == 'W' ){
     tot <- bank + ml_pay(ml, amt)
   } else  {
     tot <- bank - amt
