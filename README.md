@@ -2,10 +2,10 @@
 ## _Beating the Book: A Machine Learning Approach to Identifying an Edge in NBA Betting Markets_
 
 ### Overview
-Final thesis submitted in June 2020 for the Masters of Applied Statistics program at UCLA. The research covers three topics with the goal of building a model to beat the betting lines in predicting winner of an NBA matchup.
+Final thesis submitted in June 2020 for the Masters of Applied Statistics program at UCLA. The goal of this research was to building a model using NBA data that could systematically beat the market's moneyline betting odds. Study was conducted in three phases:
 
 #### 1. Moneyline odds to win probabilities
-An analysis of NBA moneylines from 2007-08 to 2019-20 such that we remove the "vig" and are left with the true win probability for each team.
+An analysis of NBA moneylines from 2007-08 to 2019-20 and the conversion/derivation of those odds into true win probabilities for each team by removing the "vig".
 
 #### 2. Model building to predict matchup winner
 Model building using four different methods (logistic regression, random forest, XGBoost, and neural networks) to determine a win probability (based on pace-adjusted box score metrics) for each team in the matchup
@@ -16,13 +16,19 @@ Implementation of several betting strategies including a fixed wager technique a
 
 ### Contents
 
-Codebase  - 
+Codebase 
 
-Full thesis text -  thesis\_gd\_2020.pdf
+* Modeling code - 
+* Bet results - fixed wagers - 
+* Bet results - Kelly criteria - 
+* Datasets - raw - 
+* Datasets - aggregated - 
 
-Presentation Outline - thesis\_overview.pdf
+Full thesis text -  xxxxxxx
 
-Executive Summary -  
+Executive summary results -  xxxxxxx
+
+Research outline - xxxxxxx
 
 
 ### Some references
@@ -40,5 +46,5 @@ Executive Summary -
 	* http://practicallypredictable.com/2017/12/21/web-scraping-nba-team-matchups-box-scores/
 
 
-![uncutgems](images/uncut.jpg)
+<img src="images/uncut.jpg" alt = "uncut gems" width = "400" />
 ### &copy; Guy Dotan - June 2020
