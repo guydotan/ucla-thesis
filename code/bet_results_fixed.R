@@ -2,50 +2,55 @@
 
 library(ggplot2)
 library(reshape2)
+library(dplyr)
 
-setwd("~/Documents/UCLA MAS/Thesis/repo-backup/uclathesis/data/")
+setwd("~/Documents/UCLA MAS/Thesis/repo-local/uclathesis/data/")
 options(scipen = 99999)
 
-nba <- read.csv("cleaned-data/new_nba_ytd_matchup.csv", stringsAsFactors = F)
-nba2 <- read.csv("nba_adv_complete.csv", stringsAsFactors = F)
+nba <- read.csv("predictions/best-preds-ytd.csv", stringsAsFactors = F)
 
+### DATA PREP
+{
 nba$dateGame <- as.Date(nba$dateGame)
 nba <- nba %>% arrange(dateGame, idTeam.team1)
 
-# nba <- left_join(nba, nba2 %>% select(idGame, idTeam, dateGame, slugMatchup), by = c("idGame" = "idGame", "idTeam.team1" = "idTeam"))
-testNBA <- nba %>% select(slugSeason, idGame, dateGame, slugMatchup,
-                          idTeam.team1, slugTeam, locationGame.team1, outcomeGame.team1, teamML.team1, teamWinProb.team1, 
-                          idOpp, slugOpp, outcomeGame.team2, teamML.team2, teamWinProb.team2)
+#nba <- nba[(nba$teamGameNumNoPost.team1 >= 8 & nba$teamGameNumNoPost.team2 >= 8),]
 
-#testNBA <- nba[!is.na(nba$teamWinProb),]
-testNBA <- testNBA[testNBA$slugSeason == '2018-19', ]
+testNBA <- nba %>% dplyr::select(slugSeason, idGame, dateGame, slugMatchup,
+                          idTeam.team1, slugTeam, locationGame.team1, outcomeGame.team1, teamML.team1, teamWinProb.team1, 
+                          idOpp, slugOpp, outcomeGame.team2, teamML.team2, teamWinProb.team2,
+                          logitPredL, logitPredW)
+
+#testNBA <- testNBA[testNBA$slugSeason == '2019-20', ]
 
 ### model prediction to test betting results ###
-# add fake model prediction
-# testNBA$mlOdds <- sapply(testNBA$teamML, function(x) ml_to_prob(x))
-set.seed(2020)
-testNBA$modelPred <- sapply(testNBA$teamWinProb.team1, function(x) rnorm(1, x, 0.1 ))
-testNBA$modelPred <- ifelse(testNBA$modelPred < 0 , 0.001 , testNBA$modelPred)
-testNBA$modelPred <- ifelse(testNBA$modelPred > 1 , 0.999 , testNBA$modelPred)
+testNBA$modelPred <- testNBA$logitPredW
 
+# add fake model prediction
+set.seed(2020)
+testNBA$randPred <- round(runif(nrow(testNBA), 1, 2),0)
+# table(testNBA$randPred)
+}
 
 ##### FIXED BET AMOUNT - MODEL EDGE #####
+{
 fixedBet <- 10
 testNBA$betPayout.team1 <- sapply(testNBA$teamML.team1, function(x) ml_pay(x , fixedBet))
 testNBA$betPayout.team2 <- sapply(testNBA$teamML.team2, function(x) ml_pay(x , fixedBet))
 
 # calculate bankroll - model edge
-testNBA$betProfit <- NA
+testNBA$betProfit.edge <- NA
 
-testNBA$betProfit <- ifelse( (testNBA$modelPred > testNBA$teamWinProb.team1) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
-testNBA$betProfit <- ifelse( (testNBA$modelPred > testNBA$teamWinProb.team1) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit)
-testNBA$betProfit <- ifelse( (testNBA$modelPred < testNBA$teamWinProb.team1) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit)
-testNBA$betProfit <- ifelse( (testNBA$modelPred < testNBA$teamWinProb.team1) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit)
+testNBA$betProfit.edge <- ifelse( (testNBA$modelPred > testNBA$teamWinProb.team1) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
+testNBA$betProfit.edge <- ifelse( (testNBA$modelPred > testNBA$teamWinProb.team1) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.edge)
+testNBA$betProfit.edge <- ifelse( (testNBA$modelPred < testNBA$teamWinProb.team1) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit.edge)
+testNBA$betProfit.edge <- ifelse( (testNBA$modelPred < testNBA$teamWinProb.team1) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.edge)
 
-testNBA$bankAmount <- cumsum(testNBA$betProfit)
-
+testNBA$bankAmount.edge <- cumsum(testNBA$betProfit.edge)
+}
 
 ##### FIXED BET AMOUNT - MODEL FAVORITE #####
+{
 # calculate bankroll - favorites
 testNBA$betProfit.fav <- NA
 
@@ -55,102 +60,158 @@ testNBA$betProfit.fav <- ifelse( (testNBA$modelPred < .5) & testNBA$outcomeGame.
 testNBA$betProfit.fav <- ifelse( (testNBA$modelPred < .5) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.fav)
 
 testNBA$bankAmount.fav <- cumsum(testNBA$betProfit.fav)
-
+}
 
 ##### FIXED BET AMOUNT - COMBO #####
+{
 # calculate bankroll - combo
-testNBA$betProfit.comb <- NA
+testNBA$betProfit.combo <- NA
 
-testNBA$betProfit.comb <- ifelse( (testNBA$modelPred > .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
-testNBA$betProfit.comb <- ifelse( (testNBA$modelPred > .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.comb)
-testNBA$betProfit.comb <- ifelse( (testNBA$modelPred < .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team2 == 'W',  0, testNBA$betProfit.comb)
-testNBA$betProfit.comb <- ifelse( (testNBA$modelPred < .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team2 == 'L', 0, testNBA$betProfit.comb)
+testNBA$betProfit.combo <- ifelse( (testNBA$modelPred > .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
+testNBA$betProfit.combo <- ifelse( (testNBA$modelPred > .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.combo)
+testNBA$betProfit.combo <- ifelse( (testNBA$modelPred < .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team2 == 'W',  0, testNBA$betProfit.combo)
+testNBA$betProfit.combo <- ifelse( (testNBA$modelPred < .5 & (testNBA$modelPred > testNBA$teamWinProb.team1)) & testNBA$outcomeGame.team2 == 'L', 0, testNBA$betProfit.combo)
 
-testNBA$bankAmount.comb <- cumsum(testNBA$betProfit.comb)
+testNBA$bankAmount.combo <- cumsum(testNBA$betProfit.combo)
+}
 
 ##### FIXED BET AMOUNT - ODDS FAV #####
+{
 # calculate bankroll - odds favorite
-testNBA$betProfit.odds <- NA
+testNBA$betProfit.oddsfav <- NA
 
-testNBA$betProfit.odds <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
-testNBA$betProfit.odds <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.odds)
-testNBA$betProfit.odds <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit.odds)
-testNBA$betProfit.odds <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.odds)
+testNBA$betProfit.oddsfav <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
+testNBA$betProfit.oddsfav <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.oddsfav)
+testNBA$betProfit.oddsfav <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit.oddsfav)
+testNBA$betProfit.oddsfav <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.oddsfav)
 
-testNBA$bankAmount.odds <- cumsum(testNBA$betProfit.odds)
+testNBA$bankAmount.oddsfav <- cumsum(testNBA$betProfit.oddsfav)
+}
 
+##### FIXED BET AMOUNT - ODDS DOG #####
+{
+# calculate bankroll - odds favorite
+testNBA$betProfit.oddsdog <- NA
 
-## combined graphs ##
+testNBA$betProfit.oddsdog <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
+testNBA$betProfit.oddsdog <- ifelse( (testNBA$teamWinProb.team1 < .5) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.oddsdog)
+testNBA$betProfit.oddsdog <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit.oddsdog)
+testNBA$betProfit.oddsdog <- ifelse( (testNBA$teamWinProb.team1 > .5) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.oddsdog)
+
+testNBA$bankAmount.oddsdog <- cumsum(testNBA$betProfit.oddsdog)
+}
+
+##### FIXED BET AMOUNT - RANDOM #####
+{
+# calculate bankroll - odds favorite
+testNBA$betProfit.rand <- NA
+
+testNBA$betProfit.rand <- ifelse( (testNBA$randPred == 1) & testNBA$outcomeGame.team1 == 'W', testNBA$betPayout.team1, 0 )
+testNBA$betProfit.rand <- ifelse( (testNBA$randPred == 1) & testNBA$outcomeGame.team1 == 'L', -1 * fixedBet, testNBA$betProfit.rand)
+testNBA$betProfit.rand <- ifelse( (testNBA$randPred == 2) & testNBA$outcomeGame.team2 == 'W',  testNBA$betPayout.team2, testNBA$betProfit.rand)
+testNBA$betProfit.rand <- ifelse( (testNBA$randPred == 2) & testNBA$outcomeGame.team2 == 'L',  -1 * fixedBet, testNBA$betProfit.rand)
+
+testNBA$bankAmount.rand <- cumsum(testNBA$betProfit.rand)
+}
+
+##### COMBINED GRAPHS #####
+{
 # add row numbers
 testNBA$rownums <- 1:nrow(testNBA)
-graphdata <- testNBA %>% select(dateGame, bankAmount, bankAmount.fav, bankAmount.comb, bankAmount.odds)
-names(graphdata) <- c("dateGame","Model Edge", "Model Favorite","Model Combo", "Odds Favorite")
+graphdata <- testNBA %>% dplyr::select(dateGame, bankAmount.edge, bankAmount.fav, bankAmount.combo, bankAmount.oddsfav, bankAmount.oddsdog, bankAmount.rand)
+names(graphdata) <- c("dateGame","Model Edge", "Model Favorite","Model Combo", "Odds Favorite", "Odds Underdog", "Random")
 #graphdata$dateGame <- as.Date(graphdata$dateGame)
 
 # graph of bankroll over time
 d <- melt(graphdata, id.vars="dateGame")
 ggplot(d, aes(dateGame,value, col=variable)) + 
   geom_line(size = 1.5, alpha = 0.7) +
-  scale_x_date(date_breaks = "months" , date_labels = "%b '%y") +
-  theme(axis.text=element_text(size=18), 
+  scale_x_date(date_breaks = "months" , date_labels = "%b '%y", limits = c(as.Date('2019-10-22'),as.Date('2020-04-01'))) +
+  theme(axis.text=element_text(size=18),
         axis.title=element_text(size=20),
         legend.text=element_text(size=16),
         legend.title=element_blank(),
-        legend.position = "top") +
+        legend.position = "bottom",
+        plot.title = element_text(size = 20, hjust = 0.5),
+        plot.subtitle = element_text(size = 16, hjust = 0.5)) +
   xlab("")+
   ylab("Bankroll ($)") +
+  labs(title = "Total Bankroll Over Time using Various Betting Strategies", subtitle = "(2019-20 NBA Season)") +
   geom_hline(yintercept=0, linetype="dashed", color = "black") +
   annotate(geom="text", label="Starting Bankroll ($0)", 
-           x= as.Date('2019-03-15'), size = 4, y=10, vjust=-1) +
-  scale_color_manual(values = c("#8BB8E8","#003B5C", "#FFD100","#808080"))
+           x= as.Date('2020-03-25'), size = 3, y=5, vjust=-1) +
+scale_color_manual(values = c("#00CFFF", "#FFD100", "#005587", "#616A6B","#8BB8E8", "#FFA500"))
+}
 
-
-
-### Summary Stats ###
-
-# fav
+##### SUMMARY STATS #####
+{
 summ <- testNBA
-summ$bet_type.fav <- ifelse(summ$betProfit.fav > 0 , "win", "loss")
-summ[summ$betProfit.fav == 0,]$bet_type <- "no bet"
-table(summ$bet_type.fav)
-tail(summ$bankAmount.fav)
+summ_df <- data.frame("Model" = c("Model Edge", "Model Favorite","Model Combo", "Odds Favorite", "Odds Underdog", "Random"),
+                      "Win" = rep(NA,6),
+                      "Loss" = rep(NA,6),
+                      "No.Bet" = rep(NA,6),
+                      "Win Pct" = rep(NA,6),
+                      "Final.Bankroll" = rep(NA,6),
+                      "ROI" = rep(NA,6))
 
 # edge
-summ$bet_type.edge <- ifelse(summ$betProfit > 0 , "win", "loss")
-summ[summ$betProfit == 0,]$bet_type.edge <- "no bet"
-table(summ$bet_type.edge)
-tail(summ$bankAmount)
+summ$bet_type.edge <- ifelse(summ$betProfit.edge > 0 , "win", "loss")
+#[summ$betProfit.edge == 0,]$bet_type.edge <- "no bet"
+summ_df[1,2] <- sum(summ$bet_type.edge == 'win')
+summ_df[1,3] <- sum(summ$bet_type.edge == 'loss')
+summ_df[1,4] <- sum(summ$bet_type.edge == 'no bet')
+summ_df[1,5] <- round(summ_df[1,2] / (summ_df[1,2]+summ_df[1,3]),3)
+summ_df[1,6] <- summ$bankAmount.edge[nrow(summ)]
+summ_df[1,7] <- round(summ$bankAmount.edge[nrow(summ)]/(10 * (summ_df[1,2]+summ_df[1,3])),3)
+
+# fav
+summ$bet_type.fav <- ifelse(summ$betProfit.fav > 0 , "win", "loss")
+#summ[summ$betProfit.fav == 0,]$bet_type.fav <- "no bet"
+summ_df[2,2] <- sum(summ$bet_type.fav == 'win')
+summ_df[2,3] <- sum(summ$bet_type.fav == 'loss')
+summ_df[2,4] <- sum(summ$bet_type.fav == 'no bet')
+summ_df[2,5] <- round(summ_df[2,2] / (summ_df[2,2]+summ_df[2,3]),3)
+summ_df[2,6] <- summ$bankAmount.fav[nrow(summ)]
+summ_df[2,7] <- round(summ$bankAmount.fav[nrow(summ)]/(10 * (summ_df[2,2]+summ_df[2,3])),3)
 
 # combo
-summ$bet_type.comb <- ifelse(summ$betProfit.comb > 0 , "win", "loss")
-summ[summ$betProfit.comb == 0,]$bet_type.comb <- "no bet"
-table(summ$bet_type.comb)
-tail(summ$bankAmount.comb)
+summ$bet_type.combo <- ifelse(summ$betProfit.combo > 0 , "win", "loss")
+summ[summ$betProfit.combo == 0,]$bet_type.combo <- "no bet"
+summ_df[3,2] <- sum(summ$bet_type.combo == 'win')
+summ_df[3,3] <- sum(summ$bet_type.combo == 'loss')
+summ_df[3,4] <- sum(summ$bet_type.combo == 'no bet')
+summ_df[3,5] <- round(summ_df[3,2] / (summ_df[3,2]+summ_df[3,3]),3)
+summ_df[3,6] <- summ$bankAmount.combo[nrow(summ)]
+summ_df[3,7] <- round(summ$bankAmount.combo[nrow(summ)]/(10 * (summ_df[3,2]+summ_df[3,3])),3)
 
 # odds fav
-summ$bet_type.odds <- ifelse(summ$betProfit.odds > 0 , "win", "loss")
-summ[summ$betProfit.odds == 0,]$bet_type.odds <- "no bet"
-table(summ$bet_type.odds)
-tail(summ$bankAmount.odds)
+summ$bet_type.oddsfav <- ifelse(summ$betProfit.oddsfav > 0 , "win", "loss")
+summ[summ$betProfit.oddsfav == 0,]$bet_type.oddsfav <- "no bet"
+summ_df[4,2] <- sum(summ$bet_type.oddsfav == 'win')
+summ_df[4,3] <- sum(summ$bet_type.oddsfav == 'loss')
+summ_df[4,4] <- sum(summ$bet_type.oddsfav == 'no bet')
+summ_df[4,5] <- round(summ_df[4,2] / (summ_df[4,2]+summ_df[4,3]),3)
+summ_df[4,6] <- summ$bankAmount.oddsfav[nrow(summ)]
+summ_df[4,7] <- round(summ$bankAmount.oddsfav[nrow(summ)]/(10 * (summ_df[4,2]+summ_df[4,3])),3)
 
 
+# odds dog
+summ$bet_type.oddsdog <- ifelse(summ$betProfit.oddsdog > 0 , "win", "loss")
+summ[summ$betProfit.oddsdog == 0,]$bet_type.oddsdog <- "no bet"
+summ_df[5,2] <- sum(summ$bet_type.oddsdog == 'win')
+summ_df[5,3] <- sum(summ$bet_type.oddsdog == 'loss')
+summ_df[5,4] <- sum(summ$bet_type.oddsdog == 'no bet')
+summ_df[5,5] <- round(summ_df[5,2] / (summ_df[5,2]+summ_df[5,3]),3)
+summ_df[5,6] <- summ$bankAmount.oddsdog[nrow(summ)]
+summ_df[5,7] <- round(summ$bankAmount.oddsdog[nrow(summ)]/(10 * (summ_df[5,2]+summ_df[5,3])),3)
 
-# # add row numbers
-# testNBA$rownums <- 1:nrow(testNBA)
-# testNBA$dateGame <- as.Date(testNBA$dateGame)
-# 
-# # graph of bankroll over time
-# ggplot(data = testNBA , aes(x = dateGame , y = bankAmount)) +
-#   geom_line( colour = 'darkgreen', size = 1.5, alpha = 0.7) +
-#   geom_hline(yintercept=0, linetype="dashed", color = "black") +
-#   scale_x_date(date_breaks = "months" , date_labels = "%b '%y") + 
-#   theme(axis.text=element_text(size=18), 
-#         axis.title=element_text(size=20),
-#         legend.text=element_text(size=16),
-#         legend.title=element_blank()) +
-#   xlab("") +
-#   ylab("Bankroll ($)") +
-#   geom_hline(yintercept=0, linetype="dashed", color = "black") +
-#   annotate(geom="text", label="Starting Bankroll ($0)", 
-#            x= as.Date('2019-04-01'), size = 4, y=5, vjust=-1)
-
+# random
+summ$bet_type.rand <- ifelse(summ$betProfit.rand > 0 , "win", "loss")
+#summ[summ$betProfit.rand == 0,]$bet_type.rand <- "no bet"
+summ_df[6,2] <- sum(summ$bet_type.rand == 'win')
+summ_df[6,3] <- sum(summ$bet_type.rand == 'loss')
+summ_df[6,4] <- sum(summ$bet_type.rand == 'no bet')
+summ_df[6,5] <- round(summ_df[6,2] / (summ_df[6,2]+summ_df[6,3]),3)
+summ_df[6,6] <- summ$bankAmount.rand[nrow(summ)]
+summ_df[6,7] <- round(summ$bankAmount.rand[nrow(summ)]/(10 * (summ_df[6,2]+summ_df[6,3])),3)
+}

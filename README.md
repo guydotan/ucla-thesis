@@ -16,19 +16,25 @@ Implementation of several betting strategies including a fixed wager technique, 
 
 ### Contents
 
-Codebase 
+**Codebase** 
 
-* Modeling code - 
-* Bet results - fixed wagers - 
-* Bet results - Kelly criteria - 
-* Datasets - raw - 
-* Datasets - aggregated - 
+* Model Code - 
+	* All models comparison
+	* Bet strategy - fixed wager
+	* Bet strategy - Kelly criteria
+* Data -  
+	* Team box scores
+	* Aggregated data, year-to-date
+	* Aggregated data, 8-game span
+	* 2019-20 prediction results using best model
 
-Full thesis text -  xxxxxxx
+**Reports**
 
-Executive summary results -  xxxxxxx
+* Full thesis text -  xxxxxxx
 
-Research outline - xxxxxxx
+* Executive summary results -  xxxxxxx
+ 
+* Research outline - xxxxxx
 
 ### Results
 Positive (and sizable) returns on investment were realized with several techniques notably the "Model Edge", "5th Kelly", and "8th Kelly" methods.
