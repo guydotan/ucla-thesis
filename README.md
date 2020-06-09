@@ -33,11 +33,13 @@ Research outline - xxxxxxx
 ### Results
 Return on investment was realized with several techniques notably the "Model Edge", "5th Kelly", and "8th Kelly" methods.
 
-<img src="images/bet-perf-fixed-final.png" alt = "bet results fixed" width = "400" />
+<center>
+<img src="images/bet-perf-fixed-final.png" alt = "bet results fixed" width = "600" />
 
-<img src="images/bet-perf-kc-final.png" alt = "bet results kelly" width = "400" />
+<img src="images/bet-perf-kc-final.png" alt = "bet results kelly" width = "600" />
 
-<img src="images/bet-perf-kc-final2.png" alt = "bet results kelly 2" width = "400" />
+<img src="images/bet-perf-kc-final2.png" alt = "bet results kelly 2" width = "600" />
+</center>
 
 
 ### Some references
