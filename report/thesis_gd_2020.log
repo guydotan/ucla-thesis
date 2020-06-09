@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 MAY 2020 00:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 MAY 2020 23:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -625,141 +625,156 @@ CHAPTER 5.
 File: ./images/corrs_plot.png Graphic file (type png)
 
 <use ./images/corrs_plot.png>
-Package pdftex.def Info: ./images/corrs_plot.png used on input line 554.
+Package pdftex.def Info: ./images/corrs_plot.png used on input line 556.
 (pdftex.def)             Requested size: 501.87683pt x 284.94691pt.
 
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 554--555
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 556--557
  [][] 
  []
 
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 555--555
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 557--557
 [] [] 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [29
 
- <./images/corrs_plot.png>] [30]
+] [30 <./images/corrs_plot.png>]
+<./images/logistic-reg.png, id=159, 1403.2425pt x 622.325pt>
+File: ./images/logistic-reg.png Graphic file (type png)
+
+<use ./images/logistic-reg.png>
+Package pdftex.def Info: ./images/logistic-reg.png used on input line 569.
+(pdftex.def)             Requested size: 401.50146pt x 178.05766pt.
+
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 570--570
+[] [] 
+ []
+
+[31 <./images/logistic-reg.png (PNG copy)>]
 CHAPTER 6.
-[31
+[32
 
 ]
 CHAPTER 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 596--597
 
  []
 
-[32
+[33
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
 
  []
 
-<./images/break-even.png, id=165, 1003.75pt x 903.375pt>
+<./images/break-even.png, id=169, 1003.75pt x 903.375pt>
 File: ./images/break-even.png Graphic file (type png)
 
 <use ./images/break-even.png>
-Package pdftex.def Info: ./images/break-even.png used on input line 606.
+Package pdftex.def Info: ./images/break-even.png used on input line 624.
 (pdftex.def)             Requested size: 325.215pt x 292.69742pt.
 
-Overfull \hbox (70.63303pt too wide) in paragraph at lines 612--625
+Overfull \hbox (70.63303pt too wide) in paragraph at lines 630--643
  [][] 
  []
 
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 626--626
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 644--644
 [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 
  []
 
-[33] [34 <./images/break-even.png>] [35]
-<./images/fixed-bets-fav.png, id=177, 629.35126pt x 579.16376pt>
+[34] [35 <./images/break-even.png>] [36]
+<./images/fixed-bets-fav.png, id=181, 629.35126pt x 579.16376pt>
 File: ./images/fixed-bets-fav.png Graphic file (type png)
 
 <use ./images/fixed-bets-fav.png>
-Package pdftex.def Info: ./images/fixed-bets-fav.png used on input line 658.
+Package pdftex.def Info: ./images/fixed-bets-fav.png used on input line 676.
 (pdftex.def)             Requested size: 220.50885pt x 202.92244pt.
 
-<./images/fixed-bets-edge.png, id=178, 629.35126pt x 579.16376pt>
+<./images/fixed-bets-edge.png, id=182, 629.35126pt x 579.16376pt>
 File: ./images/fixed-bets-edge.png Graphic file (type png)
 
 <use ./images/fixed-bets-edge.png>
-Package pdftex.def Info: ./images/fixed-bets-edge.png used on input line 660.
+Package pdftex.def Info: ./images/fixed-bets-edge.png used on input line 678.
 (pdftex.def)             Requested size: 220.50885pt x 202.92244pt.
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 661--661
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 679--679
 [] [] 
  []
 
-<./images/bet-performance-fixed.png, id=179, 1003.75pt x 702.625pt>
+<./images/bet-performance-fixed.png, id=183, 1003.75pt x 702.625pt>
 File: ./images/bet-performance-fixed.png Graphic file (type png)
 
 <use ./images/bet-performance-fixed.png>
 Package pdftex.def Info: ./images/bet-performance-fixed.png used on input line 
-670.
+688.
 (pdftex.def)             Requested size: 451.68915pt x 316.18904pt.
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 671--671
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 689--689
 [] [] 
  []
 
-[36 <./images/fixed-bets-fav.png> <./images/fixed-bets-edge.png>] [37 <./images
+[37 <./images/fixed-bets-fav.png> <./images/fixed-bets-edge.png>] [38 <./images
 /bet-performance-fixed.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 681.
+               Default added (so using `tbp') on input line 699.
 
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 683--683
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 701--701
 [] [] 
  []
 
-[38]
+[39]
 CHAPTER 8.
-[39
+[40
 
-] [40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
+] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
 
  []
 
-[42] [43] [44] [45] [46] [47]
-<./images/bet-performance-kc.png, id=221, 1003.75pt x 702.625pt>
+[43] [44] [45] [46] [47] [48]
+<./images/bet-performance-kc.png, id=225, 1003.75pt x 702.625pt>
 File: ./images/bet-performance-kc.png Graphic file (type png)
 
 <use ./images/bet-performance-kc.png>
-Package pdftex.def Info: ./images/bet-performance-kc.png used on input line 915
+Package pdftex.def Info: ./images/bet-performance-kc.png used on input line 933
 .
 (pdftex.def)             Requested size: 451.68915pt x 316.18904pt.
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 916--916
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 934--934
 [] [] 
  []
 
-[48 <./images/bet-performance-kc.png>] [49]
+[49 <./images/bet-performance-kc.png>] [50]
 CHAPTER 9.
-[50
+[51
 
 ]
 CHAPTER 10.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 933.
+               Default added (so using `tbp') on input line 951.
 
 
-Overfull \hbox (18.0675pt too wide) in paragraph at lines 935--935
+Overfull \hbox (18.0675pt too wide) in paragraph at lines 953--953
 [] [] 
  []
 
-(./thesis_gd_2020.bbl [51
+(./thesis_gd_2020.bbl [52
 
-] [52]) [53
+] [53]) [54
 
 ] (./thesis_gd_2020.aux)
 
@@ -767,10 +782,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3977 strings out of 492995
- 59698 string characters out of 6132704
- 133971 words of memory out of 5000000
- 7451 multiletter control sequences out of 15000+600000
+ 3983 strings out of 492995
+ 59844 string characters out of 6132704
+ 133982 words of memory out of 5000000
+ 7456 multiletter control sequences out of 15000+600000
  9706 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,17n,46p,1424b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -789,10 +804,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis_gd_2020.pdf (62 pages, 1809999 bytes).
+Output written on thesis_gd_2020.pdf (63 pages, 2056429 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
+ 296 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

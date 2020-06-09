@@ -1,6 +1,6 @@
 ## exploratory data analysis ##
 
-setwd("~/Documents/UCLA MAS/Thesis/repo-backup/uclathesis/")
+setwd("~/Documents/UCLA MAS/Thesis/repo-local/uclathesis/")
 library("ggplot2")
 library("dplyr")
 library("ggimage")
@@ -9,7 +9,7 @@ library("reshape2")
 library("ggpmisc")
 
 
-nba <- read.csv("data/nba_adv.csv", stringsAsFactors = F, na.strings = "")
+nba <- read.csv("data/nba_adv_complete.csv", stringsAsFactors = F, na.strings = "")
 champs <-  read.csv("data/id-mapping/nba-champs.csv", stringsAsFactors = F, na.strings = "")
 
 nba <- nba[nba$typeSeason == "Regular Season",]
@@ -291,6 +291,23 @@ ggcorrplot(corr, type = 'lower', show.diag = T, method = "circle",#hc.order = T,
               legend.text = element_text(size = 12),
               legend.title = element_text(size = 12))
 
+
+# historam matrix
+melted_nba <- melt(nba[,c(23:29,31:45,91,93)])
+#Then you can facet your ggplot by variable and automatically create separate histograms for each dimension.
+
+library(tidyr)
+library(ggplot2)
+
+nba_v <- nba[,c(21,23:29,31:45,91,93)] %>% gather(-outcomeGame , key = 'var', value = 'value')#%>% head()
+
+nba_v <- nba_v[complete.cases(nba_v$outcomeGame),]
+
+nba_v %>%
+  ggplot(aes(x = value, group=outcomeGame, fill=outcomeGame)) +
+    geom_density(alpha = 0.5) + 
+    facet_wrap(~var, scales = 'free') +
+     scale_fill_ucla("main")
 
 
 # EDA

@@ -545,9 +545,11 @@ The last alteration to the dataset was to remove postseason games from this part
 %      Chapter 5     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Model Building}
 
-Before training any preliminary models, it was worthwhile to see if there was any redundancy in our variable set. A quick way to examine that potential is to look at correlations/multicollinearity within the numerical predictors in the dataset. Figure \ref{fig:corrs} shows the breakdown for all correlations between box score metrics in the modeling set, including the advanced ones. For the most part there does not appear to be any glaring collinearities that might cause concern. However, the ones that were noteworthy were:
+Before training any preliminary models, it was worthwhile to see if there was any redundancy in our variable set. A quick way to examine that potential is to look at correlations/multicollinearity within the numerical predictors in the dataset. Figure \ref{fig:corrs} shows the breakdown for all correlations between the single-team box score metrics in the modeling set, including the advanced ones. As one familiar with basketball statistics might expect, there were some quite highly correlated variables.
 
-Pace-Possessions, Total Rebounds, Offensive Rebounds.
+For example, we calculated pace earlier in the study as basically a per-48 minute transformation for possessions. And as a result, the correlation between he two variables was 0.9. Field-goal attempts was highly correlated with field-goals mades (0.8), free-throw attempts was associated to free-throws made (0.9), and total rebounds was correlated to defensive rounds (0.8). Additionally, all of the shooting percentage metrics (field-goal percentage, two-point field-goal percentage, etc.), were highly associated with the shooting attempts metrics. 
+
+Clearly, many of the standard NBA box score statistics are interrelated, which is why the analytics communities have crafted advanced metrics that bake in many of these raws statistics into a catch-call measure. Examples of these are ``true shooting percentage'' and ``defensive rebounding percentage''.\footnote{https://www.basketball-reference.com/about/glossary.html} For further research, it would be prudent, to examine these advanced metrics developed by basketball's analytics community when building probability such as the one in this study. Regardless, for the purposes of this study, we will stick to our available box score metrics and keep in mind the opportunity to eliminate these correlated variables when choosing the best predictors for the model. 
 
 \begin{figure}[h]
 \centering
@@ -558,6 +560,22 @@ Pace-Possessions, Total Rebounds, Offensive Rebounds.
 
 
 \section{Logistic Regression}
+Since our response outcome is a binary variable (team 1 either won or lost) we would be remiss to not begin the model building process with an attempt at a logistic regression. The more common, linear regression, is ideal for scenarios where you are predicting an outcome that has a range of possibilities, usually continuous. How much revenue a product will sell or how long a flight might take, for example. Whereas with a logistic regression the predicted Y values are restricted by an asymptote that exists at 0 and at 1. Logistic regression is reserved for models with two outcomes, whether a patient tests positive or negative for a disease or will a person default on their credit or not.
+
+In fact, for our particular study, logistic regression is a perfect model type to explore as it does not actually give you a single binary response. Logit models returns a probability score that reflects the predicted probability of the occurrence of that event. That probability is then rounded (usually at 50\%) to determine whether the model predicts a positive or negative response. Figure \ref{fig:logit} depicts a logistic regression curve and the range of outcomes that can be outputted from a model. 
+ 
+\begin{figure}[h]
+\centering
+  \includegraphics[width=400px]{logistic-reg.png}
+  \caption{Simplified examples of a linear regression versus logistic regression}
+  \label{fig:logit}
+\end{figure}
+
+Logistic models, and most machine learning algorithms, operate best when only the most critical features are included in the model. Reasons for this reality of model building are many, some of which being that fewer features allow for algorithms to train faster, improves interpretability of the final result, reduces overfitting, and when properly fewer features can actually improve the accuracy of model versus one with far more.
+
+To conduct all of the model building in this study we used the \emph{caret} package with R. \emph{Caret} is short for ``classification and regression training'' and contains a variety of tools to prep the data for modeling, build training and testing sets, and has over 200 different machine learning algorithms available. But before diving into any the logistic models, the first step was to identify any potentially high importance features. Using \emph{Caret}, we implemented the recursive feature elimination technique to identify these best predictors.
+
+
 
 \section{Random Forest}
 
