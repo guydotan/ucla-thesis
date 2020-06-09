@@ -62,7 +62,7 @@ Positive (and sizable) returns on investment were realized with several techniqu
 * NBA API
 	* http://practicallypredictable.com/2017/12/21/web-scraping-nba-team-matchups-box-scores/
 
-<br/><br/>
+<br/>
 
 <img src="images/uncut.jpg" alt = "uncut gems" width = "400" />
 
