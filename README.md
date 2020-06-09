@@ -34,11 +34,18 @@ Research outline - xxxxxxx
 Positive (and sizable) returns on investment were realized with several techniques notably the "Model Edge", "5th Kelly", and "8th Kelly" methods.
 
 <p align = "center">
-<img src="images/bet-perf-fixed-final.png" alt = "bet results fixed" width = "600" border = 1/>
+<kbd>
+<img src="images/bet-perf-fixed-final.png" alt = "bet results fixed" width = "600" />
+</kbd>
 
-<img src="images/bet-perf-kc-final.png" alt = "bet results kelly" width = "600" border = 1/>
+<kbd>
+<img src="images/bet-perf-kc-final.png" alt = "bet results kelly" width = "600" />
+</kbd>
 
-<img src="images/bet-perf-kc-final2.png" alt = "bet results kelly 2" width = "600" border = 1/>
+<kbd>
+<img src="images/bet-perf-kc-final2.png" alt = "bet results kelly 2" width = "600" />
+</kbd>
+
 </p>
 
 ### Some references
