@@ -47,4 +47,5 @@ Research outline - xxxxxxx
 
 
 <img src="images/uncut.jpg" alt = "uncut gems" width = "400" />
-### &copy; Guy Dotan - June 2020
+
+#### &copy; Guy Dotan - June 2020
