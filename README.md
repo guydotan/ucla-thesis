@@ -18,11 +18,11 @@ Implementation of several betting strategies including a fixed wager technique, 
 
 **Codebase** 
 
-* Model Code - 
+* [Model Code](https://github.com/guy-dotan/uclathesis/tree/master/code)
 	* All models comparison
 	* Bet strategy - fixed wager
 	* Bet strategy - Kelly criteria
-* Data -  
+* [Data](https://github.com/guy-dotan/uclathesis/tree/master/data)
 	* Team box scores
 	* Aggregated data, year-to-date
 	* Aggregated data, 8-game span
@@ -30,11 +30,11 @@ Implementation of several betting strategies including a fixed wager technique, 
 
 **Reports**
 
-* Full thesis text -  xxxxxxx
+* Full thesis text -  [thesis-text.pdf](https://github.com/guy-dotan/uclathesis/blob/master/thesis-text.pdf)
 
 * Executive summary results -  xxxxxxx
  
-* Research outline - xxxxxx
+* Research outline - [thesis-outline.pdf](https://github.com/guy-dotan/uclathesis/blob/master/thesis-outline.pdf)
 
 ### Results
 Positive (and sizable) returns on investment were realized with several techniques notably the "Model Edge", "5th Kelly", and "8th Kelly" methods.
