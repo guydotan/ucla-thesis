@@ -30,7 +30,7 @@ Implementation of several betting strategies including a fixed wager technique, 
 
 **Reports**
 
-* Digital Publication - https://escholarship.org/uc/item/115957mb
+* Digital publication - https://escholarship.org/uc/item/115957mb
 
 * Full thesis text -  [thesis-text.pdf](https://github.com/guy-dotan/uclathesis/blob/master/thesis-text.pdf)
 
