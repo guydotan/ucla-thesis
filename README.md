@@ -2,7 +2,7 @@
 ## _Beating the Book: A Machine Learning Approach to Identifying an Edge in NBA Betting Markets_
 
 ### Overview
-Final thesis submitted in June 2020 for the *[Master of Applied Statistics](https://master.stat.ucla.edu/)* degree at UCLA. The goal of this research was to build a model using NBA data that could systematically beat the market's moneyline betting odds. Study was conducted in three phases:
+Final thesis submitted in June 2020 for *[UCLA's Master of Applied Statistics](https://master.stat.ucla.edu/)* degree. The goal of this research was to build a model using NBA data that could systematically beat the market's moneyline betting odds. Study was conducted in three phases:
 
 #### 1. Moneyline odds to win probabilities
 An analysis of NBA moneylines from 2007-08 to 2019-20 and the conversion/derivation of those odds into true win probabilities for each team by removing the "vig".
