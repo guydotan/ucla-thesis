@@ -34,7 +34,7 @@ Implementation of several betting strategies including a fixed wager technique, 
 
 * Full thesis text -  [thesis-text.pdf](https://github.com/guy-dotan/uclathesis/blob/master/thesis-text.pdf)
 
-* Executive summary of results -  xxxxxxx
+* Executive summary of results -  \[work in progreess\]
  
 * Research outline - [thesis-outline.pdf](https://github.com/guy-dotan/uclathesis/blob/master/thesis-outline.pdf)
 
